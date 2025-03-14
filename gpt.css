@@ -1,0 +1,241 @@
+/* Using the sun's diameter as the base scale */
+/* Sun: 120px diameter (our baseline) */
+/* Scale: 1px = 11,583 km (approximately) */
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image: url("../images/bg.jpg");
+    background-size: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .sun {
+    height: 120px;
+    width: 120px;
+    background-image: url("../images/sun.png");
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: 0 0 60px #f9c05f;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+  }
+  
+  /* Mercury: Diameter 0.38× Earth's diameter (4.9px) */
+  .mercury {
+    height: 5px;
+    width: 5px;
+    background: #a9a9a9;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 0 10px #a9a9a9;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    animation: orbit-mercury 2s linear infinite;
+  }
+  
+  /* Mercury's orbit: 0.39 AU = 57.9 million km = 5px (scaled) */
+  @keyframes orbit-mercury {
+    from {transform: rotate(0deg)translateX(80px) rotate(0deg);}
+    to {transform: rotate(360deg)translateX(80px) rotate(-360deg);}
+  }
+  
+  .mercury-outline {
+    height: 160px;
+    width: 160px;
+  }
+  
+  /* Venus: Diameter 0.95× Earth's diameter (12.4px) */
+  .venus {
+    height: 12px;
+    width: 12px;
+    background: #e39e41;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 0 15px #e39e41;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    animation: orbit-venus 5.5s linear infinite;
+  }
+  
+  /* Venus's orbit: 0.72 AU = 108 million km = 9.3px (scaled) */
+  @keyframes orbit-venus {
+    from {transform: rotate(0deg)translateX(130px) rotate(0deg);}
+    to {transform: rotate(360deg)translateX(130px) rotate(-360deg);}
+  }
+  
+  .venus-outline-1 {
+    height: 260px;
+    width: 260px;
+  }
+  
+  /* Earth: Diameter 13px */
+  .earth {
+    height: 13px;
+    width: 13px;
+    background-image: url("../images/planet-earth.png");
+    background-size: 100%;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 0 15px #2855d6;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    animation: orbit-earth 9s linear infinite;
+  }
+  
+  /* Earth's orbit: 1 AU = 149.6 million km = 13px (scaled) */
+  @keyframes orbit-earth {
+    from {transform: rotate(0deg)translateX(180px) rotate(0deg);}
+    to {transform: rotate(360deg)translateX(180px) rotate(-360deg);}
+  }
+  
+  .earth-outline-1 {
+    height: 360px;
+    width: 360px;
+  }
+  
+  /* Moon: Diameter 0.27× Earth's diameter (3.5px) */
+  .earth-circle {
+    height: 30px;
+    width: 30px;
+    border: 1px dotted rgba(255, 255, 255, 0.4);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+  }
+  
+  .earth-inner {
+    height: 3.5px;
+    width: 3.5px;
+    background-color: #d6d6d6;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: 0 0;
+    animation: orbit-moon 2s linear infinite;
+  }
+  
+  /* Moon's orbit: 384,400 km = 15px (scaled) */
+  @keyframes orbit-moon {
+    from {transform: rotate(0deg)translateX(15px) rotate(0deg);}
+    to {transform: rotate(360deg)translateX(15px) rotate(-360deg);}
+  }
+  
+  /* Mars: Diameter 0.53× Earth's diameter (6.9px) */
+  .mars {
+    height: 7px;
+    width: 7px;
+    background: #c1440e;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 0 10px #c1440e;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    animation: orbit-mars 17s linear infinite;
+  }
+  
+  /* Mars' orbit: 1.52 AU = 227.9 million km = 19.7px (scaled) */
+  @keyframes orbit-mars {
+    from {transform: rotate(0deg)translateX(230px) rotate(0deg);}
+    to {transform: rotate(360deg)translateX(230px) rotate(-360deg);}
+  }
+  
+  .mars-outline-1 {
+    height: 460px;
+    width: 460px;
+  }
+  
+  /* Jupiter: Diameter 11.2× Earth's diameter (145.6px) */
+  .jupiter {
+    height: 30px; /* Scaling down for practical display */
+    width: 30px;
+    background: #eabc7a;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 0 20px #eabc7a;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    animation: orbit-jupiter 60s linear infinite;
+  }
+  
+  /* Jupiter's orbit: 5.2 AU = 778.6 million km = 67.2px (scaled) */
+  @keyframes orbit-jupiter {
+    from {transform: rotate(0deg)translateX(300px) rotate(0deg);}
+    to {transform: rotate(360deg)translateX(300px) rotate(-360deg);}
+  }
+  
+  .jupiter-outline-1 {
+    height: 600px;
+    width: 600px;
+  }
+  
+  /* Saturn: Diameter 9.45× Earth's diameter (122.8px) */
+  .saturn {
+    height: 25px; /* Scaling down for practical display */
+    width: 25px;
+    background: #f7cd89;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 0 20px #f7cd89;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    animation: orbit-saturn 150s linear infinite;
+  }
+  
+  /* Saturn's orbit: 9.54 AU = 1.43 billion km = 123.3px (scaled) */
+  @keyframes orbit-saturn {
+    from {transform: rotate(0deg)translateX(380px) rotate(0deg);}
+    to {transform: rotate(360deg)translateX(380px) rotate(-360deg);}
+  }
+  
+  .saturn-ring {
+    height: 5px;
+    width: 40px;
+    background-color: rgba(210, 180, 140, 0.6);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    box-shadow: 0 0 5px #d2b48c;
+  }
+  
+  .saturn-outline-1 {
+    height: 760px;
+    width: 760px;
+  }
+  
+  /* Planet labels */
+  p {
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: absolute;
+    font-size: 8px;
+    text-align: center;
+    width: 100%;
+    top: 15px;
+    left: 0;
+  }
+  
+  /* Common outline styles */
+  .mercury-outline, .venus-outline-1, .earth-outline-1, .mars-outline-1, .jupiter-outline-1, .saturn-outline-1 {
+    border-radius: 50%;
+    border: 1px dotted rgba(221, 221, 221, 0.6);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
