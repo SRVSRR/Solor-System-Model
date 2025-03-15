@@ -3,12 +3,17 @@
 ## Overview  
 This project is a simple, interactive solar system model built using **HTML** and **CSS**.
 
-## 📜 How to Use  
-1. Download or clone this repository.  
-2. Open `index.html` in your web browser.  
-3. Watch the planets revolve around the Sun!    
+## Getting Started
+You'll have to firstly fork and clone the repo. Make sure you have the G++ compiler installed. Then, choose the program you want to run and compile it:
+```
+g++ -o <output_file_name> <name_of_files(s)_you_want_to_run>
+```
+Once successfully compiled, you can execute the output file using:
+```
+./<output_file_name>
+```  
 
-## 📌 Future Improvements  
+## Future Improvements  
 - Add JavaScript for interactivity (e.g., click to view planet details).  
 - Improve accuracy of planetary orbits.   
 - Images for planets and scaling sizes to actual.
