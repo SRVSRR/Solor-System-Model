@@ -1,5 +1,7 @@
 # 🌍 Solar System Model – HTML & CSS  
 
+[![Watch the video](https://raw.githubusercontent.com/SRVSRR/Solor-System-Model/main/path/to/thumbnail.png)](https://raw.githubusercontent.com/SRVSRR/Solor-System-Model/main/path/to/video.mov)
+
 ## Overview  
 This project is a simple, interactive solar system model built using **HTML** and **CSS**.
 
